@@ -2,43 +2,33 @@ package ProductPurchase;
 
 import java.util.*;
 
-public class Customer {
+public class Customer{
     private String id;
-    private String address;
-    private String phone;
+    private Address address;
+    private Phone phone;
     private String email;
 
-    Customer(String id, String address, String phone, String email) {
-        this.id = id;
+    Customer(Address address, Phone phone, String email) {
         this.address = address;
         this.phone = phone;
         this.email = email;
     }
-    void setId(String id) {
-        this.id = id;
-    }
-    void setAddress(String address) {
+    void setAddress(Address address) {
         this.address = address;
     }
-    void setPhone(String phone) {
+    void setPhone(Phone phone) {
         this.phone = phone;
     }
     void setEmail(String email) {
         this.email = email;
     }
-    String getId() {
-        return id;
-    }
-    String getAddress() {
+    Address getAddress() {
         return address;
     }
     String getPhone() {
-        return phone;
+        return phone.toString();
     }
     String getEmail() {
         return email;
-    }
-    public String toString() {
-        return "Customer [id=" + id + ", address=" + address + ", phone=" + phone + ", email=" + email + "]";
     }
 }
